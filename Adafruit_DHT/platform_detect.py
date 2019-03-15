@@ -26,6 +26,7 @@ UNKNOWN = 0
 RASPBERRY_PI = 1
 BEAGLEBONE_BLACK = 2
 MINNOWBOARD = 3
+LAPOTETO = 4
 
 
 def platform_detect():
@@ -47,6 +48,8 @@ def platform_detect():
         return BEAGLEBONE_BLACK
     elif plat.lower().find('armv7l-with-glibc2.4') > -1:
         return BEAGLEBONE_BLACK
+    elif plat.lower().find('meson64-aarch64-with-debian') > -1:
+        return  LAPOTETO
 
     print('Pi: ',pi,' plat: ',plat)
     # Handle Minnowboard
