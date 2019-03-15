@@ -33,7 +33,7 @@ def platform_detect():
     platform type.  Will return RASPBERRY_PI, BEAGLEBONE_BLACK, or UNKNOWN."""
     # Handle Raspberry Pi
     pi = pi_version()
-    print(pi)
+
     if pi is not None:
         return RASPBERRY_PI
 
@@ -48,6 +48,7 @@ def platform_detect():
     elif plat.lower().find('armv7l-with-glibc2.4') > -1:
         return BEAGLEBONE_BLACK
 
+    print('Pi: ',pi,' plat: ',plat)
     # Handle Minnowboard
     # Assumption is that mraa is installed
     try:
