@@ -33,6 +33,7 @@ def platform_detect():
     platform type.  Will return RASPBERRY_PI, BEAGLEBONE_BLACK, or UNKNOWN."""
     # Handle Raspberry Pi
     pi = pi_version()
+    print(pi)
     if pi is not None:
         return RASPBERRY_PI
 
