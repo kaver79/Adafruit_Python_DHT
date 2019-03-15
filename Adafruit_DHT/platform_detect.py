@@ -57,7 +57,7 @@ def platform_detect():
         pass
 
     # Couldn't figure out the platform, just return unknown.
-    RuntimeError(' platform.'.plat)
+    RuntimeError(' platform.'+plat)
     return UNKNOWN
 
 
